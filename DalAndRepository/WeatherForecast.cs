@@ -13,19 +13,19 @@ namespace DalAndRepository
 {
     public class WeatherForecast : IForeCast
     {
-        public string GetUrlService(string lat, string lng)
+        public string GetUrlService(string lat, string lng, string api, string key)
         {
             var result = "";
-            result = "http://api.openweathermap.org/data/2.5/weather?" + "lat=" + lat + "&lon=" + lng + "&" + "appid=";
+            result = api + "lat=" + lat + "&lon=" + lng + "&" + "appid="+key;
+          
 
             return result;
         }
 
-        public string GetWeather(string Lat, string Lng)
+        public string GetWeather(string url)
         {
         
-            var url =
-                GetUrlService(Lat, Lng) + "d41c82ebc78b1aab491f8e101e0185a6";
+            
             var webReq = (HttpWebRequest)WebRequest.Create(url);
             try
             {
@@ -154,11 +154,11 @@ namespace DalAndRepository
 
         }
        
-        public WeatherInform GetInform(string Lat, string Lng)
+        public WeatherInform GetInform(string url)
         {
             var result = new WeatherInform();
             
-            var weather= GetWeather(Lat, Lng);
+            var weather= GetWeather(url);
             var main = GetMain(weather);
 
 

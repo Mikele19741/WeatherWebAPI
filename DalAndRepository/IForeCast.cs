@@ -8,7 +8,7 @@ namespace DalAndRepository
     public interface IForeCast
     {
 
-        //  public GoogleTimeZone GetTimeZone(Double Lat, Double Lng);
-        public WeatherInform GetInform(string Lat, string Lng);
+        public string GetUrlService(string lat, string lng, string api, string key);
+        public WeatherInform GetInform(string url);
     }
 }
