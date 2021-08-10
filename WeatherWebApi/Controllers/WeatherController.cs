@@ -20,10 +20,9 @@ namespace WeatherWebApi.Controllers
             _forecast = forecast;
         }
         [HttpGet]
-        public WeatherInform Get()
+        public WeatherInform Get(string Lat, string Lng)
         {
-            var Lat = "56.9460000";
-            var Lng = "24.1058900";
+          
             return _forecast.GetInform(Lat, Lng);
         }
     }
