@@ -25,5 +25,7 @@ namespace DalAndRepository.Models
         public string Sunrise { get; set; }
         [DefaultValue("")]
         public string Sunset { get; set; }
+
+        public string TimeZone { get; set; }
     }
 }

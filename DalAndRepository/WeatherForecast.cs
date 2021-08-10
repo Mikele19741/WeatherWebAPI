@@ -121,6 +121,15 @@ namespace DalAndRepository
             return atm;
         }
 
+        public string getTimeZone(string resultString)
+        {
+           
+            var jObject = JObject.Parse(resultString);
+            var jItems = jObject["name"];
+           
+            return jItems.ToString();
+        }
+
         public double GetCelicius(double tempKelvin, bool cf)
         {
             if (cf)
@@ -144,7 +153,8 @@ namespace DalAndRepository
 
 
         }
-        public WeatherInform _GetInform(string Lat, string Lng)
+       
+        public WeatherInform GetInform(string Lat, string Lng)
         {
             var result = new WeatherInform();
             
@@ -194,6 +204,7 @@ namespace DalAndRepository
             var sunrise = ConvertFromUnixTimestamp(Convert.ToDouble(sys.sunrise)).TimeOfDay;
             result.Sunset = $"{sunset.ToString()}(UTC Time)";
             result.Sunrise = $"{ sunrise.ToString()}(UTC Time)";
+            result.TimeZone = getTimeZone(weather);
 
             return result;
 

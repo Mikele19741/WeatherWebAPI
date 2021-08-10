@@ -1,0 +1,9 @@
+C:\Repos\WeatherWebAPI\DalAndRepository\bin\Debug\netcoreapp3.1\DalAndRepository.deps.json
+C:\Repos\WeatherWebAPI\DalAndRepository\bin\Debug\netcoreapp3.1\DalAndRepository.dll
+C:\Repos\WeatherWebAPI\DalAndRepository\bin\Debug\netcoreapp3.1\DalAndRepository.pdb
+C:\Repos\WeatherWebAPI\DalAndRepository\obj\Debug\netcoreapp3.1\DalAndRepository.csprojAssemblyReference.cache
+C:\Repos\WeatherWebAPI\DalAndRepository\obj\Debug\netcoreapp3.1\DalAndRepository.AssemblyInfoInputs.cache
+C:\Repos\WeatherWebAPI\DalAndRepository\obj\Debug\netcoreapp3.1\DalAndRepository.AssemblyInfo.cs
+C:\Repos\WeatherWebAPI\DalAndRepository\obj\Debug\netcoreapp3.1\DalAndRepository.csproj.CoreCompileInputs.cache
+C:\Repos\WeatherWebAPI\DalAndRepository\obj\Debug\netcoreapp3.1\DalAndRepository.dll
+C:\Repos\WeatherWebAPI\DalAndRepository\obj\Debug\netcoreapp3.1\DalAndRepository.pdb
