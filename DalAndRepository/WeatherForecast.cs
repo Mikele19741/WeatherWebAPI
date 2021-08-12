@@ -151,8 +151,6 @@ namespace DalAndRepository
                 }
 
             }
-
-
             var clouds = "";
             clouds = GetAthmpsphere("clouds", weather);
             var wind = GetWind(weather);
