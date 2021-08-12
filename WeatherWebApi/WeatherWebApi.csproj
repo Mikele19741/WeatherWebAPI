@@ -8,5 +8,9 @@
     <ProjectReference Include="..\DalAndRepository\DalAndRepository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
+  </ItemGroup>
+
 
 </Project>
