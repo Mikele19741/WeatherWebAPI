@@ -16,7 +16,7 @@ namespace DalAndRepository
         public string GetUrlService(string lat, string lng, string api, string key)
         {
             var result = "";
-            result = api + "lat=" + lat + "&lon=" + lng + "&" + "appid="+key;
+            result = api + "lat=" + lat + "&lon=" + lng + "&units=metric&" + "appid="+key;
           
 
             return result;
@@ -130,35 +130,14 @@ namespace DalAndRepository
             return jItems.ToString();
         }
 
-        public double GetCelicius(double tempKelvin, bool cf)
-        {
-            if (cf)
-                return tempKelvin - 273;
-            else
-            {
-                return 9 / 5 * (tempKelvin - 273) + 32;
-
-            }
-        }
-        public double GetPressure(double pressure, bool pre)
-        {
-            if (pre)
-            {
-                return pressure / 133.3224 * 100;
-            }
-            else
-            {
-                return pressure;
-            }
-
-
-        }
+      
        
+     
         public WeatherInform GetInform(string url)
         {
             var result = new WeatherInform();
-            
-            var weather= GetWeather(url);
+
+            var weather = GetWeather(url);
             var main = GetMain(weather);
 
 
@@ -173,7 +152,7 @@ namespace DalAndRepository
 
             }
 
-           
+
             var clouds = "";
             clouds = GetAthmpsphere("clouds", weather);
             var wind = GetWind(weather);
@@ -194,10 +173,10 @@ namespace DalAndRepository
             var tMax = Double.Parse(main.temp_max, new CultureInfo("en-US"));
             var Temp = Double.Parse(main.temp, new CultureInfo("en-US"));
             var tPresure = Double.Parse(main.pressure, new CultureInfo("en-US"));
-            result.MinTemp = GetCelicius(tMin, true);
-            result.MaxTemp = GetCelicius(tMax, true);
-            result.Temp = GetCelicius(Temp, true);
-            result.Pressure = GetPressure(Convert.ToDouble(tPresure), true);
+            result.MinTemp = tMin;
+            result.MaxTemp = tMax;
+            result.Temp = Temp;
+            result.Pressure = tPresure;
             result.CurrentDateTime = GetDate(weather);
             result.Cloud = clouds;
             var sunset = ConvertFromUnixTimestamp(Convert.ToDouble(sys.sunset)).TimeOfDay;
@@ -210,5 +189,18 @@ namespace DalAndRepository
 
         }
 
+        public string GetUrlServiceZipCode(string zipcode,  string api, string key)
+        {
+            var result = "";
+            result = api + "zip=" + zipcode + "&units=metric&" + "appid=" + key;
+            return result;
+
+        }
+
+        public WeatherOfCitiy GetInformWeather(string url)
+        {
+            var inf = GetInform(url);
+            return new WeatherOfCitiy() { City = inf.TimeZone, Tempirature = inf.Temp.ToString() };
+        }
     }
 }
