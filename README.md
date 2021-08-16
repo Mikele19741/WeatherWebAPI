@@ -9,7 +9,7 @@ http://yourhost/api/weather?Lat=24.6877300&Lng=46.7218500
 http://yourhost/api/weatherbyzipcode?zip=99501
 
 # Request Sample by zip code for other countries
-http://yourhost/api/weatherbyzipcode?zip=127486,ru
+http://yourhost/api/weatherbyzipcode?zip={zipcode},{country code}
 # Request result
 {
     "currentDateTime": "2021-08-10T14:30:58Z",
