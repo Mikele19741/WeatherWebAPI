@@ -22,3 +22,12 @@ C:\Repos\WeatherWebAPI\WeatherWebApi\obj\Debug\netcoreapp3.1\WeatherWebApi.cspro
 C:\Repos\WeatherWebAPI\WeatherWebApi\obj\Debug\netcoreapp3.1\WeatherWebApi.dll
 C:\Repos\WeatherWebAPI\WeatherWebApi\obj\Debug\netcoreapp3.1\WeatherWebApi.pdb
 C:\Repos\WeatherWebAPI\WeatherWebApi\obj\Debug\netcoreapp3.1\WeatherWebApi.genruntimeconfig.cache
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\package-lock.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\angular.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\e2e\tsconfig.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\package-lock.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\package.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\tsconfig.app.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\tsconfig.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\tsconfig.spec.json
+C:\Repos\WeatherWebAPI\WeatherWebApi\bin\Debug\netcoreapp3.1\ClientApp\WeatherClient\tslint.json
