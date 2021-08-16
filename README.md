@@ -2,8 +2,14 @@
 # BACKEND 
 I used http://api.openweathermap.org/data/2.5/weather? api service for get current weather and another interesting values. For deployment please register
 on http://api.openweathermap.org/ this api and get API Key. After that change parameter "weatherAPICode" in appsettings.json file on you api key
-# Request Sample
+# Request Sample by coordinate
 http://yourhost/api/weather?Lat=24.6877300&Lng=46.7218500
+
+# Request Sample by zip code for US
+http://yourhost/api/weatherbyzipcode?zip=99501
+
+# Request Sample by zip code for other countries
+http://yourhost/api/weatherbyzipcode?zip=127486,ru
 # Request result
 {
     "currentDateTime": "2021-08-10T14:30:58Z",
@@ -30,3 +36,7 @@ http://yourhost/api/weather?Lat=24.6877300&Lng=46.7218500
     "sunset": "15:31:45(UTC Time)",
     "timeZone": "Riyadh"
 }
+
+
+#FRONTEND
+Please change url in file ....\WeatherWebApi\ClientApp\WeatherClient\src\app\weather-forecast\weather-forecast.service.ts  on you url
