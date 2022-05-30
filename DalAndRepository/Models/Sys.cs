@@ -6,13 +6,13 @@ namespace DalAndRepository.Models
 {
    public class Sys
     {
-        public string id { get; set; }
-        public string message { get; set; }
-        public string country { get; set; }
-        public string sunrise { get; set; }
+        public string Id { get; set; }
+        public string Message { get; set; }
+        public string Country { get; set; }
+        public string Sunrise { get; set; }
 
-        public string sunset { get; set; }
-        public string name { get; set; }
-        public string cod { get; set; }
+        public string Sunset { get; set; }
+        public string Name { get; set; }
+        public string Cod { get; set; }
     }
 }

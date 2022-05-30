@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = WeatherWebApi
+build_property.ProjectDir = C:\Repos\WeatherWebAPI\WeatherWebApi\

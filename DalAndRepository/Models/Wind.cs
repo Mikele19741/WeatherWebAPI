@@ -6,7 +6,7 @@ namespace DalAndRepository.Models
 {
     public class Wind
     {
-        public string speed { get; set; }
-        public string deg { get; set; }
+        public string Speed { get; set; }
+        public string Deg { get; set; }
     }
 }

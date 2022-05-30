@@ -147,11 +147,11 @@ namespace DalAndRepository
             {
                 foreach (var item in atm)
                 {
-                    result.Atm += $"{item.description}";
+                    result.Atm += $"{item.Description}";
                 }
 
             }
-            var clouds = "";
+            var clouds = string.Empty;
             clouds = GetAthmpsphere("clouds", weather);
             var wind = GetWind(weather);
             if (!String.IsNullOrWhiteSpace(clouds))
@@ -167,24 +167,24 @@ namespace DalAndRepository
             {
                 result.Main = main;
             }
-            var tMin = Double.Parse(main.temp_min, new CultureInfo("en-US"));
-            var tMax = Double.Parse(main.temp_max, new CultureInfo("en-US"));
-            var Temp = Double.Parse(main.temp, new CultureInfo("en-US"));
-            var tPresure = Double.Parse(main.pressure, new CultureInfo("en-US"));
+            var tMin = Double.Parse(main.Temp_min, new CultureInfo("en-US"));
+            var tMax = Double.Parse(main.Temp_max, new CultureInfo("en-US"));
+            var Temp = Double.Parse(main.Temp, new CultureInfo("en-US"));
+            var tPresure = Double.Parse(main.Pressure, new CultureInfo("en-US"));
             result.MinTemp = tMin;
             result.MaxTemp = tMax;
             result.Temp = Temp;
             result.Pressure = tPresure;
             result.CurrentDateTime = GetDate(weather);
             result.Cloud = clouds;
-            var sunset = ConvertFromUnixTimestamp(Convert.ToDouble(sys.sunset)).TimeOfDay;
-            var sunrise = ConvertFromUnixTimestamp(Convert.ToDouble(sys.sunrise)).TimeOfDay;
-            result.Sunset = $"{sunset.ToString()}(UTC Time)";
-            result.Sunrise = $"{ sunrise.ToString()}(UTC Time)";
+            var sunset = ConvertFromUnixTimestamp(Convert.ToDouble(sys.Sunset)).TimeOfDay;
+            var sunrise = ConvertFromUnixTimestamp(Convert.ToDouble(sys.Sunrise)).TimeOfDay;
+            result.Sunset = $"{sunset}(UTC Time)";
+            result.Sunrise = $"{ sunrise}(UTC Time)";
             result.TimeZone = getTimeZone(weather);
-
             return result;
-
+          
+           // 
         }
 
         public string GetUrlServiceZipCode(string zipcode,  string api, string key)
@@ -197,8 +197,8 @@ namespace DalAndRepository
 
         public WeatherOfCitiy GetInformWeather(string url)
         {
-            var inf = GetInform(url);
-            return new WeatherOfCitiy() { City = inf.TimeZone, Tempirature = inf.Temp.ToString() };
+            var result = GetInform(url);
+            return new WeatherOfCitiy() { City = result.TimeZone, Tempirature = result.Temp.ToString() };
         }
     }
 }
